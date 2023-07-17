@@ -1,0 +1,13 @@
+<view class="nx_congar_title" style="position:fixed">
+  <text>系统公告</text>
+  </view>
+  <view style="  padding: 90rpx 20rpx 0 20rpx; background-color: white;" wx:for="{{noticeList}}" wx:key="id">
+      <view style="padding: 20rpx 0; border-top: 1rpx solid #ccc;display: flex;">
+        <view style="flex: 5;padding: 10rpx;font-size: 30rpx;font-weight: bold;">{{item.name}}</view>
+        <view style="flex: 5;padding: 10rpx; text-align: right;">发布于{{item.time}}</view>
+      </view>
+      <view style="padding-top: 30rpx;padding-bottom: 20rpx; overflow-y: auto; max-height: calc(100vh - 260rpx);">
+      <rich-text nodes="{{item.content}}">
+      </rich-text>
+      </view>
+</view>

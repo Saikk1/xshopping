@@ -1,0 +1,16 @@
+page,view,text,swiper,siper-item,image,navigator{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* 主题颜色 */
+page{
+  --themeColor:#d81e06;
+  background-color: white;
+  columns: #666666;
+  font-size:28rpx;
+}
+
+image{
+  width: 100%;
+}

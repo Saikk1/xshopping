@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/categories/index",
+    "pages/goodsInfo/index",
+    "pages/cartInfo/index",
+    "pages/user/index",
+    "pages/search/search",
+    "pages/recharge/index",
+    "pages/about/index",
+    "pages/notice/index",
+    "pages/login/index",
+    "pages/orderInfo/index",
+    "pages/orderDetail/index",
+    "pages/comment/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#d81e06",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home-o.png"
+      },
+      {
+        "pagePath": "pages/categories/index",
+        "text": "分类",
+        "iconPath": "icons/games.png",
+        "selectedIconPath": "icons/games-o.png"
+      },
+      {
+        "pagePath": "pages/cartInfo/index",
+        "text": "下单",
+        "iconPath": "icons/shop-cart.png",
+        "selectedIconPath": "icons/shop-cart-o.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user-o.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
