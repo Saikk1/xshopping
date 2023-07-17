@@ -14,11 +14,6 @@
     "pages/orderDetail/index",
     "pages/comment/index"
   ],
-  "permission": {
-    "scope.userInfo": {
-      "desc": "你的个人信息将用于登录授权"
-    }
-  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
