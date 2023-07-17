@@ -1,0 +1,24 @@
+<view class="index">  
+  <!-- 搜索 -->
+  <view class="posBar">
+    <view class="searchBar">
+      <view class="input">
+    <image class="searchicon" src="../../icons/search.png"></image>
+    <input auto-focus="true" bindinput="search" placeholder="请输入游戏名称" />
+      </view>
+  </view>
+</view>
+
+  <!-- 本站商品开始 -->
+  <view class="nx_congar_list1">
+    <navigator class="nx_congar_item_1" wx:for="{{goodsInfoGoodsList}}" wx:for-item="item" wx:key="id" url="/pages/goodsInfo/index?id={{item.id}}">
+        <image class="barview" mode="heightFix" src="{{item.url}}"></image>
+        <view class="nx_item_name txtleft">{{item.name}}</view>
+        <view class="vview"></view>
+        <view class="nx_item_name txt txtleft">全区中文</view>
+        <view class="vview"></view>
+        <view class="pritxt txtleft">{{item.price}}元</view>
+      </navigator>
+    </view>
+  <!-- 本站商品结束 -->
+</view>

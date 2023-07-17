@@ -1,0 +1,5 @@
+<view class="login_title">点击【登录】授权登录</view>
+<image src="/imgs/Error.gif"></image>
+<view class="loginBtnView">
+  <button class="loginBtn" style="background-color: #d81e06;color: white;" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+</view>

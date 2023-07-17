@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="index">
+<!-- 分类商品开始 -->
+  <view class="nx_congar">
+  <scroll-view class="scroll-wrapper" scroll-x scroll-with-animation="true" scroll-into-view="item{{currentTab < 4 ? 0 : currentTab - 3}}"  style="position: sticky; left: NaNrpx; top: 0rpx ; z-index:10"> 
+  <view class="navigate-item" wx:for="{{taskList}}"data-index="{{index}}" bindtap="handleClick" data-id="{{item.id}}">
+    <view class="names {{currentTab === index ? 'active' : ''}}">{{item.name}}</view>
+    <view class="currtline {{currentTab === index ? 'active' : ''}}"></view>
+  </view>
+  </scroll-view>
+<view class="input">
+<image class="searchicon" src="../../icons/search.png"></image>
+  <input bindtap="bindfocus" placeholder="请输入游戏名称" />
+  </view>
+
+  <swiper class="sswiper" indicator-dots="{{false}}" bindchange="handleSwiper" current="{{currentTab}}">
+    <block wx:for="{{taskList}}" wx:key="idx">
+			<swiper-item class="sswiper-item" style="overflow: scroll;">
+				<scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"  bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower" style="width: 750rpx; height: -276rpx; display: block; box-sizing: content-box; left: NaNrpx; top: 0rpx">
+					<view class="nx_congar_list">
+      <navigator class="nx_congar_item_1" wx:for="{{contentList}}" wx:for-item="item" wx:key="id" url="/pages/goodsInfo/index?id={{item.id}}">
+        <image class="barview" mode="heightFix" src="{{item.url}}"></image>
+        <view class="nx_item_name ">{{item.name}}</view>
+        <view class="nx_item_name txt">{{item.engname}}</view>
+        <view class="vview"></view>
+        <view class="nx_item_name txt">全区中文</view>
+        <view class="vview"></view>
+        <view class="pritxt">{{item.price}}元</view>
+        <image class="barview-r" mode="heightFix" src="../../icons/metacritic.png" style="position: relative; left: 96rpx; top: -130rpx; width: 57rpx; height: 36rpx; display: inline-block; box-sizing: border-box"></image>
+        <view style="position: relative; left: 662rpx; top: -185rpx; width: 64rpx; height: 36rpx; display: block; box-sizing: border-box;color:gray;font-size: 25rpx;">{{item.mark}}分</view>
+      </navigator>
+    </view>
+				</scroll-view>
+			</swiper-item>
+	</block>
+  </swiper>
+    <!-- 分类商品结束 -->
+  
+  </view>
+</view>

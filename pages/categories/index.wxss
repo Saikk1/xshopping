@@ -1,0 +1,199 @@
+/**index.wxss**/
+
+
+
+.textview{
+  display: flex;
+  justify-content: center;
+}
+
+.barview{
+  float: left;
+}
+
+.txt{
+  color:rgb(138, 127, 127);
+  font-size: 20rpx;
+}
+
+.pritxt{
+  color:#d81e06;
+  font-weight:bold;
+}
+
+.vview{
+  height:15rpx;
+}
+
+.nx_swiper swiper{
+  width: 550rpx;
+  height: 400rpx;
+}
+
+.nx_swiper swiper image{
+  width: 400rpx;
+  height: 400rpx;
+}
+
+/* ScrollView导航栏 */
+.scroll-wrapper {
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  background: #FFF;
+  height: 90rpx;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.navigate-item {
+  display: inline-block;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 0 16rpx;
+}
+
+.names {
+  font-size: 28rpx;
+  color: #3c3c3c;
+}
+
+.names.active {
+  color: #d81e06;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.currtline {
+  margin: -8rpx auto 0 auto;
+  width: 100rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+}
+
+.currtline.active {
+  background: #d81e06;
+  transition: all .3s;
+}
+
+.sswiper {
+  height: 100vh;
+  min-height: calc(100vh - 100rpx);
+}
+.sswiper-item {
+  width: 100%;
+  text-align: center;
+  padding: 32rpx 0;
+  
+}
+
+scroll-view {
+  height: calc(100vh - 200rpx);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: #FFF;
+  z-index: 9999;
+}
+/*宫格列表*/
+.nx_congar{
+  margin-top:20 rpx;
+}
+
+.nx_congar_title{
+  padding: 20rpx;
+  color:black;
+  font-weight:bold;
+  font-size: 35rpx;
+  background-color: white;
+  border-bottom: 1rpx solid #eee;
+  border-top: 1rpx solid #eee;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.nx_congar_list{
+  padding: 20rpx 0rpx 0 20rpx;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.nx_congar_list navigator{
+  margin-bottom: 20rpx;
+  text-align: left;
+  color:black;
+  border-bottom: 1px solid #eee;
+  border-radius: 5rpx;
+}
+
+.nx_congar_list1{
+  padding: 20rpx 20rpx 0 20rpx;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 0 0 10rpx 10rpx;
+}
+.nx_congar_list1 navigator{
+  margin-bottom: 20rpx;
+  text-align: center;
+  color:black;
+  border-bottom: 1px solid #eee;
+  border-radius: 5rpx;
+}
+
+
+.nx_congar_item_1{
+  width:100%;
+}
+
+.nx_congar_item_1 image{
+  height:180rpx;
+  width: fit-content;
+}
+
+.nx_congar_item_3{
+  width:33.3%;
+}
+.nx_congar_item_3 image{
+  width:90%*33.3%;
+  height:180rpx;
+}
+
+.nx_item_name{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+/* 输入框样式 */
+.input{
+  position: fixed;
+  right: -10rpx;
+  top: 25rpx;
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  z-index: 100;
+  display:flex;
+}
+
+.searchicon{
+  height: 40rpx;
+  width: 50rpx;
+}
+
+/* 图片 */
+.barview-r{
+  margin-left: 350rpx;
+  margin-top: 0rpx;
+}

@@ -1,0 +1,100 @@
+<!--index.wxml-->
+<view class="index">
+<view class="searchBar">
+<view class="input">
+  <image class="searchicon" src="../../icons/search.png"></image>
+  <input bindtap="bindfocus" placeholder="搜索商品" />
+  </view>
+</view>
+<!--轮播图开始-->
+  <view class="nx_swiper textview" style="width: 100%; height: 458rpx; display: flex; box-sizing: border-box">
+    <swiper autoplay indicator-dots indicator-color="#eee" indicator-active-color="#d81e06" circular interval="3000" previous-margin="120rpx" next-margin="120rpx">
+      <swiper-item class="textview" wx:for="{{goodsInfoCarouselList}}" wx:key="id">
+        <navigator url="/pages/goodsInfo/index?id={{item.id}}">
+          <image src="{{item.url}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <scroll-view scroll-x="true" style="white-space:nowrap">
+    <view class="nx_congar_item_4 item3 " wx:for="{{goodsInfoAllList}}" wx:for-item="item" wx:key="id" url="/pages/goodsInfo/index?id={{item.id}}">
+      <navigator url="/pages/goodsInfo/index?id={{item.id}}">
+      <image mode="heightFix" src="{{item.url}}"></image>
+        <view class="nx_item_name ">{{item.name}}</view>
+        <view class="vview"></view>
+        <view class="nx_item_name txt">全区中文</view>
+        <view class="vview"></view>
+        <view class="pritxt">{{item.price}}元</view>
+        </navigator>
+      </view>
+</scroll-view>
+  <!-- 轮播图结束 -->
+   <view style="background-color: #eee;height: 10rpx;"></view>
+  <view class="nx_congar_title">
+    <text>| 必玩游戏精选</text>
+   </view>
+   <view class="item3Border" >
+    <scroll-view scroll-x="true" style="white-space:nowrap">
+    <view class="nx_congar_item_3 item3 " wx:for="{{goodsInfoRecommendList}}" wx:for-item="item" wx:key="id" url="/pages/goodsInfo/index?id={{item.id}}">
+      <navigator url="/pages/goodsInfo/index?id={{item.id}}">
+      <view style="position:relative">
+        <image style="position:absolute;top:0;right:0;z-index:1;height: 80rpx;" mode="heightFix" src="../../icons/Boutique.png"></image>
+        <image mode="heightFix" src="{{item.url}}"></image>
+      </view>
+        <view class="nx_item_name ">{{item.name}}</view>
+        <view class="nx_item_name txt">{{item.engname}}</view>
+      </navigator>
+      </view>
+      
+</scroll-view>
+   </view>
+  
+  
+<!-- 商品排行开始 -->
+<view class="nx_congar">
+  <view class="nx_congar_title">
+  <text>| 媒体评分排行榜</text>
+  </view>
+  <view class="nx_congar_list">
+      <navigator class="nx_congar_item_1" wx:for="{{rankList}}" wx:for-index="inx" wx:for-item="item" wx:key="id" url="/pages/goodsInfo/index?id={{item.id}}">
+        <image class="barview" mode="heightFix" src="{{item.url}}"></image>
+        <view class="nx_item_name ">{{inx+1}}.{{item.name}}</view>
+        <view class="nx_item_name txt">{{item.engname}}</view>
+        <view class="vview"></view>
+
+        <view class="nx_item_name txt">全区中文</view>
+        <view class="vview"></view>
+        <view class="pritxt">{{item.price}}元</view>
+        <view class="vview"></view>
+        <view style="display: flex;float: right;">
+        <view class="rateNum" style="position: relative; left: 0rpx; top: -120rpx">{{item.mark}}</view>
+        </view>
+        
+      </navigator>
+    </view>
+</view>
+    <!-- 商品排行结束 -->
+
+
+   <!-- 本站商品开始 -->
+   <view class="nx_congar">
+  <view class="nx_congar_title">
+  <text>| 所有游戏</text>
+  </view>
+  <view class="nx_congar_list">
+      <navigator class="nx_congar_item_1" wx:for="{{goodsInfoAllList}}" wx:for-item="item" wx:key="id" url="/pages/goodsInfo/index?id={{item.id}}">
+        <image class="barview" mode="heightFix" src="{{item.url}}"></image>
+        <view class="nx_item_name ">{{item.name}}</view>
+        <view class="nx_item_name txt">{{item.engname}}</view>
+        <view class="vview"></view>
+        <view class="nx_item_name txt">全区中文</view>
+        <view class="vview"></view>
+        <view class="pritxt">{{item.price}}元</view>
+        <view class="vview"></view>
+        <image class="barview-r" mode="heightFix" src="../../icons/metacritic.png" style="position: relative; left: 96rpx; top: -130rpx; width: 57rpx; height: 36rpx; display: inline-block; box-sizing: border-box"></image>
+        <view style="position: relative; left: 662rpx; top: -175rpx; width: 64rpx; height: 36rpx; display: block; box-sizing: border-box;color:gray;font-size: 25rpx;">{{item.mark}}分</view>
+      </navigator>
+    </view>
+    <!-- 本站商品结束 -->
+  </view>
+</view>

@@ -1,0 +1,76 @@
+<view class="nx_detail">
+  <!-- 轮播图开始 -->
+  <view class="nx_swiper textview" style="width: 750rpx; height: 470rpx; display: flex; box-sizing: border-box">
+    <swiper autoplay indicator-dots indicator-color="#eee" indicator-active-color="#d81e06" circular interval="3000">
+      <swiper-item class="textview" wx:for="{{swiperList}}" wx:key="id">
+        <navigator>
+          <image mode="heightFix" src="{{item.imgSrc}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+
+  <!-- 商品标题开始 -->
+
+  <view class="titleColor">
+    <image style="float: right" mode="heightFix" bindtap="handleCartAdd" src="../../icons/add.png" style="width: 67rpx; height: 58rpx; display: inline-block; box-sizing: border-box; position: relative; left: 142rpx; top: 13rpx"></image>
+  <view class="titleWrap" >
+  <text class="priceTitle">￥{{obj.price}}</text>
+  </view>
+  <view class="wholeWrap">
+    <view class="titleWrap titleWrap1">
+  <text class="goodsTitle">{{obj.name}}</text>
+  <view></view>
+  <text class="goodsSubTitle">{{obj.engname}}</text>
+  </view>
+  <text class="salesTitle" style="position: relative; left: 85rpx; top: 17rpx">销量：{{obj.sales}}件</text>
+  <view class="iconWrap">
+ 
+  </view>
+</view>
+</view>
+
+<view class="nx_congar_title" style="position:relative">
+  <text>| 游戏介绍</text>
+  </view>
+  <view wx:if="{{swiperList[1]}}">
+            <image mode="heightFix" src="{{swiperList[1].imgSrc}}"></image>
+  </view>
+<view class="description">
+  <view class="descriptionBorder" style="position: relative;">
+  <text class="descriptionTxt">{{obj.description}}</text>
+</view>
+</view>
+
+<view class="nx_congar_title">
+  <text>| 媒体评价</text>
+  </view>
+<view class="description">
+  <view class="commentBorder">
+  <image src="../../icons/metacritic.png" style="width: 64rpx; height: 58rpx; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 8rpx"></image>
+  <text style="position: relative; left: 0rpx; top: -12rpx ; font-weight: bold;">Metacritic媒体评分</text>
+  <text class="markTxt" style="position: relative; left: 567rpx; top: -88rpx">{{obj.mark}}
+  </text>
+  <text class="descriptionTxt" style="position: relative; left: 0rpx; top: -58rpx">"{{obj.mediacomment}}"</text>
+</view>
+</view>
+
+<view class="nx_congar_title" style="position:relative">
+  <text>| 商品评价</text>
+  </view>
+  <view style="padding: 0 20rpx; background-color: white;" wx:for="{{commentList}}" wx:key="id">
+      <view style="padding: 20rpx 0; border-top: 1rpx solid #ccc;display: flex;">
+        <view style="flex: 5;padding: 10rpx;font-size: 30rpx;font-weight: bold;">{{item.userName}}</view>
+        <view style="flex: 5;padding: 10rpx; text-align: right;">发表于{{item.createtime}}</view>
+      </view>
+      <view style="padding-top: 30rpx;padding-bottom: 20rpx;">{{item.content}}</view>
+</view>
+
+
+  <!-- 底部工具栏 -->
+  <view class="footer_tool">
+    <view class="order_pay_wrap" bindtap="handleCartAdd">加入购物车</view>
+  </view>
+</view>
+
